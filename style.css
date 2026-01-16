@@ -1,0 +1,85 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --radius: 12px;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: min(90%, 900px);
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background: var(--primary);
+  color: #020617;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
+
+/* ===== FLEX TEST ===== */
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE CHECK ===== */
+@media (max-width: 600px) {
+  body {
+    background: #020617;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
